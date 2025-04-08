@@ -1,6 +1,6 @@
 # Makefile for building the writer application
 
-# Use native compiler or set CROSS_COMPILE for cross-compilation
+# Use native compiler unless CROSS_COMPILE is provided
 CC ?= gcc
 ifdef CROSS_COMPILE
     CC := $(CROSS_COMPILE)gcc
@@ -8,7 +8,7 @@ endif
 
 CFLAGS = -Wall -Werror -O2
 
-# Source file and target executable
+# Source and target definitions
 SRC = writer.c
 TARGET = writer
 
